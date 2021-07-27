@@ -1,0 +1,13 @@
+(defun hcf(a b)
+	(if (= b 0)
+		a
+		(hcf b (rem a b))
+	)
+)
+(write-line "Enter two numbers:")
+(setq a (read))
+(setq b (read))
+(if (< a b)
+	(format t "The GCD of ~D and ~D is ~D" a b (hcf a b))
+	(format t "The GCD of ~D and ~D is ~D" a b (hcf b a))
+)

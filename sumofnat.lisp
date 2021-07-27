@@ -1,0 +1,7 @@
+(write-line "Enter the end number:")
+(setq n (read))
+(setq s 0)
+(do ((i 1 (+ i 1))) ((= i (+ n 1)))
+	(setf s (+ s i))
+)
+(format t "The sum = ~D" s)
